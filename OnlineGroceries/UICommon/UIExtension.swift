@@ -2,7 +2,7 @@
 //  UIExtension.swift
 //  OnlineGroceriesSwiftUI
 //
-//  Created by Shaurya on 30/07/24.
+//  Created by Shaurya Singh on 30/07/24.
 //
 
 import SwiftUI

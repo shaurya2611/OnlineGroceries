@@ -14,6 +14,11 @@
 		7B74B6D42C561A9F00C14F5E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B74B6D32C561A9F00C14F5E /* WelcomeView.swift */; };
 		7B74B6D62C561B1000C14F5E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B74B6D52C561B1000C14F5E /* Launch Screen.storyboard */; };
 		7B88DAEA2C589CF300BF165D /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAE92C589CF300BF165D /* UIExtension.swift */; };
+		7B88DAEC2C5B8D1E00BF165D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAEB2C5B8D1E00BF165D /* RoundButton.swift */; };
+		7B88DAEE2C5B8EF600BF165D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAED2C5B8EF600BF165D /* SignInView.swift */; };
+		7B88DAF02C5E27DF00BF165D /* RoundedButtonWithLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAEF2C5E27DF00BF165D /* RoundedButtonWithLogo.swift */; };
+		7B88DAF32C5E3F1200BF165D /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 7B88DAF22C5E3F1200BF165D /* CountryPicker */; };
+		7B88DAF72C5E404200BF165D /* CountryPickerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAF62C5E404200BF165D /* CountryPickerUI.swift */; };
 		7B92FB452C2DD71C001CC8ED /* OnlineGroceriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92FB442C2DD71C001CC8ED /* OnlineGroceriesApp.swift */; };
 		7B92FB492C2DD71F001CC8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B92FB482C2DD71F001CC8ED /* Assets.xcassets */; };
 		7B92FB4C2C2DD71F001CC8ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B92FB4B2C2DD71F001CC8ED /* Preview Assets.xcassets */; };
@@ -48,6 +53,10 @@
 		7B74B6D32C561A9F00C14F5E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7B74B6D52C561B1000C14F5E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7B88DAE92C589CF300BF165D /* UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		7B88DAEB2C5B8D1E00BF165D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		7B88DAED2C5B8EF600BF165D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		7B88DAEF2C5E27DF00BF165D /* RoundedButtonWithLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonWithLogo.swift; sourceTree = "<group>"; };
+		7B88DAF62C5E404200BF165D /* CountryPickerUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPickerUI.swift; sourceTree = "<group>"; };
 		7B92FB412C2DD71C001CC8ED /* OnlineGroceries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineGroceries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B92FB442C2DD71C001CC8ED /* OnlineGroceriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGroceriesApp.swift; sourceTree = "<group>"; };
 		7B92FB482C2DD71F001CC8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B88DAF32C5E3F1200BF165D /* CountryPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +130,9 @@
 		7B74B6D12C561A4E00C14F5E /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
+				7B88DAF62C5E404200BF165D /* CountryPickerUI.swift */,
+				7B88DAEB2C5B8D1E00BF165D /* RoundButton.swift */,
+				7B88DAEF2C5E27DF00BF165D /* RoundedButtonWithLogo.swift */,
 				7B88DAE92C589CF300BF165D /* UIExtension.swift */,
 			);
 			path = UICommon;
@@ -129,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7B74B6D32C561A9F00C14F5E /* WelcomeView.swift */,
+				7B88DAED2C5B8EF600BF165D /* SignInView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -211,6 +225,9 @@
 			dependencies = (
 			);
 			name = OnlineGroceries;
+			packageProductDependencies = (
+				7B88DAF22C5E3F1200BF165D /* CountryPicker */,
+			);
 			productName = OnlineGroceries;
 			productReference = 7B92FB412C2DD71C001CC8ED /* OnlineGroceries.app */;
 			productType = "com.apple.product-type.application";
@@ -283,6 +300,9 @@
 				Base,
 			);
 			mainGroup = 7B92FB382C2DD71C001CC8ED;
+			packageReferences = (
+				7B88DAF12C5E3F1200BF165D /* XCRemoteSwiftPackageReference "CountryPicker" */,
+			);
 			productRefGroup = 7B92FB422C2DD71C001CC8ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,9 +350,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B88DAF72C5E404200BF165D /* CountryPickerUI.swift in Sources */,
+				7B88DAEC2C5B8D1E00BF165D /* RoundButton.swift in Sources */,
 				7B74B6D42C561A9F00C14F5E /* WelcomeView.swift in Sources */,
 				7B88DAEA2C589CF300BF165D /* UIExtension.swift in Sources */,
 				7B92FB452C2DD71C001CC8ED /* OnlineGroceriesApp.swift in Sources */,
+				7B88DAF02C5E27DF00BF165D /* RoundedButtonWithLogo.swift in Sources */,
+				7B88DAEE2C5B8EF600BF165D /* SignInView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +704,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B88DAF12C5E3F1200BF165D /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B88DAF22C5E3F1200BF165D /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B88DAF12C5E3F1200BF165D /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B92FB392C2DD71C001CC8ED /* Project object */;
 }
