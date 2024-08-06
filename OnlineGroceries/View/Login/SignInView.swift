@@ -37,6 +37,7 @@ struct SignInView: View {
                     // Title
                     Text("Get your groceries \nwith nector")
                         .font(Font.customfont(Gilroy.bold, fontSize: 30))
+                        .foregroundStyle(Color.black)
                         .multilineTextAlignment(.leading)
                         .padding()
                         .frame(width: .screenWidth, alignment: .leading)
@@ -64,7 +65,7 @@ struct SignInView: View {
                        
                         TextField("Enter Phone Number", text: $phoneNumber)
                             .font(Font.customfont(Gilroy.medium, fontSize: 20))
-                            .foregroundStyle(Color.primaryText)
+                            .foregroundStyle(Color.gray)
                     }
                     
                     Divider().padding(.horizontal)
@@ -75,10 +76,15 @@ struct SignInView: View {
                         .multilineTextAlignment(.center)
                     
                     // google login button
-                    RoundedButtonWithLogo(title: "Continue with Google", logo: "google_logo"){
-                        
+                    NavigationLink {// NavigationLink(destination , label)
+                        LoginView()
+                            .navigationBarBackButtonHidden()
+                    } label: {
+                        RoundedButtonWithLogo(title: "Continue with Google", logo: "google_logo"){
+                            
+                        }
                     }
-                    
+                   
                     // facebookmk login button
                     RoundedButtonWithLogo(title: "Continue with Facebook", logo: "fb_logo"){
                         
@@ -100,9 +106,10 @@ struct SignInView: View {
         .sheet(isPresented: $showCountryPicker, content: {
             CountryPickerUI(country: $countryObj)
         })
-        .ignoresSafeArea()
+        .background(Color.white)
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
+        .ignoresSafeArea()
 
     }
 }
