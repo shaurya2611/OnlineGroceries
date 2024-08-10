@@ -39,6 +39,14 @@ extension CGFloat {
         return screenHeight * per
     }
     
+    static var topInsets: Double {
+        // Access the active scene
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = windowScene.windows.first {
+            return window.safeAreaInsets.top
+        }
+        return 0.0
+    }
 //    static var topInsets: Double {
 //        if let keyWindow = UIApplication.shared.keyWindow {
 //            return keyWindow.safeAreaInsets.top

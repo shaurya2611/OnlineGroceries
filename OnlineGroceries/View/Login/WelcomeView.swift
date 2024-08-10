@@ -41,7 +41,7 @@ struct WelcomeView: View {
                     } label: {
                         RoundButton(title: "Get Started"){
                             
-                        }.padding(20)
+                        }
                     }
                     
                     

@@ -10,15 +10,15 @@ import SwiftUI
 struct LoginView: View {
     
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = LoginViewModel()
-    @State var password = ""
+    @StateObject var viewModel = LoginViewModel.shared
+    
     var body: some View {
         ZStack{
             Image("bottom_bg")
                 .resizable()
                 .scaledToFill()
                 .frame(width: .screenWidth, height: .screenHeight )
-                .foregroundStyle(Color.white)
+            
             
             
             VStack{
@@ -31,35 +31,41 @@ struct LoginView: View {
                 Spacer()
                 
                 
-               Text("Sign Up")
-                        .font(Font.customfont(Gilroy.semibold, fontSize: 26))
-                        .foregroundStyle(Color.primaryText)
-                        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
-                    
-               Text("Enter your email and password")
-                        .font(Font.customfont(Gilroy.semibold, fontSize: 16))
-                        .foregroundStyle(Color.secondaryText)
-                        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
-               
+                Text("Loging")
+                    .font(Font.customfont(Gilroy.semibold, fontSize: 26))
+                    .foregroundStyle(Color.primaryText)
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
                 
-                LineTextField(placeHOlderValue: $viewModel.username, title: "Username", placeHolder: "Enter your username")
+                Text("Enter your email and password")
+                    .font(Font.customfont(Gilroy.semibold, fontSize: 16))
+                    .foregroundStyle(Color.secondaryText)
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity, alignment: .leading)
+                
+                
+                LineTextField(placeHOlderValue: $viewModel.txtEmail, title: "Email", placeHolder: "Enter your email address", keyboardType: .emailAddress)
                 Divider()
                 
-                LineTextField(placeHOlderValue: $viewModel.email, title: "Email", placeHolder: "Enter your email address", keyboardType: .emailAddress)
-                Divider()
-                
-                LineTextField(placeHOlderValue: $viewModel.password, title: "Password", placeHolder: "Enter your password", isPassword: viewModel.isShowPassword)
+                LineTextField(placeHOlderValue: $viewModel.txtPassword, title: "Password", placeHolder: "Enter your password", isPassword: viewModel.isShowPassword)
                     .modifier(ShowButton(isShow: $viewModel.isShowPassword))
                 Divider()
                 
-     
+                NavigationLink(destination: ForgotPasswordView()) {
+                    Text("Forogt Passowrd?")
+                        .font(Font.customfont(Gilroy.semibold, fontSize: 14))
+                        .foregroundStyle(Color.primaryText)
+                    
+                }
                 
-                RoundButton(title: "Sign Up"){
+                
+                
+                
+                
+                RoundButton(title: "Log In"){
                     
                 }
                 
                 HStack{
-                    Text("Already have an account ?")
+                    Text("Don't have an account?")
                         .foregroundStyle(Color.primaryText)
                     
                     Button{
@@ -70,28 +76,32 @@ struct LoginView: View {
                     }
                 }.font(Font.customfont(Gilroy.semibold, fontSize: 14))
                 
-                Spacer()
+                
             }.padding()
             
             
-                   
-                }
+            
+        }
+        .background(Color.white)
+        .navigationTitle("")
+        .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
-                .toolbar{
-                    ToolbarItem(placement: .topBarLeading) {
-                        Image(systemName: "chevron.left")
-                            .imageScale(.large)
-                            .onTapGesture {
-                                dismiss()
-                            }
-                            
+        .toolbar{
+            ToolbarItem(placement: .topBarLeading) {
+                Image("back")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25, height: 25)
+                    .onTapGesture {
+                        dismiss()
                     }
-                }
-        
+            }
+        }
     }
 }
 
 #Preview {
     LoginView()
 }
+
 

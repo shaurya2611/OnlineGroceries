@@ -18,9 +18,8 @@ struct RoundButton: View {
             Text(title)
                 .font(.customfont(.semibold, fontSize: 18))
                 .foregroundColor(.white)
-                .multilineTextAlignment(.center)
         }
-        .frame( minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60 )
+        .frame( width: .screenWidth*0.9, height: 55 )
         .background( Color.primaryApp)
         .cornerRadius(20)
     }

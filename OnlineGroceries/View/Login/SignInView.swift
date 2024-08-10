@@ -41,7 +41,7 @@ struct SignInView: View {
                         .multilineTextAlignment(.leading)
                         .padding()
                         .frame(width: .screenWidth, alignment: .leading)
-                     
+                    
                     
                     // phone number field
                     HStack{
@@ -58,14 +58,14 @@ struct SignInView: View {
                                 Text("+\(countryObj.phoneCode)")
                                     .font(Font.customfont(Gilroy.medium, fontSize: 20))
                                     .foregroundStyle(Color.primaryText)
-                                    .keyboardType(.phonePad)
                             }
                             
                         }
-                       
+                        
                         TextField("Enter Phone Number", text: $phoneNumber)
                             .font(Font.customfont(Gilroy.medium, fontSize: 20))
-                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color.primaryText)
+                            .keyboardType(.numberPad)
                     }
                     
                     Divider().padding(.horizontal)
@@ -84,18 +84,18 @@ struct SignInView: View {
                             
                         }
                     }
-                   
+                    
                     // facebookmk login button
                     RoundedButtonWithLogo(title: "Continue with Facebook", logo: "fb_logo"){
                         
                     }
-                                        
+                    
                 }
                 .padding(.horizontal)
                 .frame(width: .screenWidth)
                 .padding(.top, .screenWidth)
                 
-        
+                
             }.padding()
             
         }
@@ -110,7 +110,7 @@ struct SignInView: View {
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
-
+        
     }
 }
 

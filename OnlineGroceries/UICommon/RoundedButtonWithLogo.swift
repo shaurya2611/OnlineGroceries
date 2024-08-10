@@ -27,7 +27,6 @@ struct RoundedButtonWithLogo: View {
                 Text(title)
                     .font(.customfont(.bold, fontSize: 18))
                     .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
                 
             }
             

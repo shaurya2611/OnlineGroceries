@@ -10,8 +10,15 @@ import SwiftUI
 
 class LoginViewModel : ObservableObject{
     
-    @Published var email: String = ""
-    @Published var username : String = ""
+    static var shared: LoginViewModel = LoginViewModel()
+    
+    @Published var txtUsername: String = ""
+    @Published var txtEmail: String = ""
+    @Published var txtPassword: String = ""
     @Published var isShowPassword: Bool = false
-    @Published var password: String = ""
+    
+    @Published var showError = false
+    @Published var errorMessage = ""
+    @Published var isUserLogin: Bool = false
+//    @Published var userObj: UserModel = UserModel(dict: [:])
 }

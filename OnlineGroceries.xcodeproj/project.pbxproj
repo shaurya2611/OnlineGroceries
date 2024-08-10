@@ -22,6 +22,7 @@
 		7B88DAF92C5F6EA100BF165D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAF82C5F6EA100BF165D /* LoginView.swift */; };
 		7B88DAFB2C6318D200BF165D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAFA2C6318D200BF165D /* LoginViewModel.swift */; };
 		7B88DAFD2C6326BA00BF165D /* LineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAFC2C6326BA00BF165D /* LineTextField.swift */; };
+		7B88DAFF2C6758DA00BF165D /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B88DAFE2C6758D900BF165D /* ForgotPasswordView.swift */; };
 		7B92FB452C2DD71C001CC8ED /* OnlineGroceriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B92FB442C2DD71C001CC8ED /* OnlineGroceriesApp.swift */; };
 		7B92FB492C2DD71F001CC8ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B92FB482C2DD71F001CC8ED /* Assets.xcassets */; };
 		7B92FB4C2C2DD71F001CC8ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B92FB4B2C2DD71F001CC8ED /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		7B88DAF82C5F6EA100BF165D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7B88DAFA2C6318D200BF165D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7B88DAFC2C6326BA00BF165D /* LineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTextField.swift; sourceTree = "<group>"; };
+		7B88DAFE2C6758D900BF165D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		7B92FB412C2DD71C001CC8ED /* OnlineGroceries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineGroceries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B92FB442C2DD71C001CC8ED /* OnlineGroceriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineGroceriesApp.swift; sourceTree = "<group>"; };
 		7B92FB482C2DD71F001CC8ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				7B74B6D32C561A9F00C14F5E /* WelcomeView.swift */,
 				7B88DAED2C5B8EF600BF165D /* SignInView.swift */,
 				7B88DAF82C5F6EA100BF165D /* LoginView.swift */,
+				7B88DAFE2C6758D900BF165D /* ForgotPasswordView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B88DAF72C5E404200BF165D /* CountryPickerUI.swift in Sources */,
+				7B88DAFF2C6758DA00BF165D /* ForgotPasswordView.swift in Sources */,
 				7B88DAEC2C5B8D1E00BF165D /* RoundButton.swift in Sources */,
 				7B74B6D42C561A9F00C14F5E /* WelcomeView.swift in Sources */,
 				7B88DAEA2C589CF300BF165D /* UIExtension.swift in Sources */,
